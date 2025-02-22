@@ -10,7 +10,7 @@ const Question = () => {
     question: "",
     options: ["", "", "", ""],
     answer: "",
-    points: 1
+    points: 1,
   });
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Question = () => {
   const handleQuestionChange = (e) => {
     setNewQuestion({
       ...newQuestion,
-      question: e.target.value
+      question: e.target.value,
     });
   };
 
@@ -38,14 +38,14 @@ const Question = () => {
     updatedOptions[index] = value;
     setNewQuestion({
       ...newQuestion,
-      options: updatedOptions
+      options: updatedOptions,
     });
   };
 
   const handleAnswerSelect = (option) => {
     setNewQuestion({
       ...newQuestion,
-      answer: option
+      answer: option,
     });
   };
 
@@ -62,7 +62,7 @@ const Question = () => {
         question: "",
         options: ["", "", "", ""],
         answer: "",
-        points: 1
+        points: 1,
       });
     } catch (error) {
       console.error("Error creating question:", error);
@@ -92,15 +92,21 @@ const Question = () => {
                 {newQuestion.options.map((option, index) => (
                   <div
                     key={index}
-                    className={`option-item ${newQuestion.answer === option ? 'correct-answer' : ''}`}
+                    className={`option-item ${
+                      newQuestion.answer === option ? "correct-answer" : ""
+                    }`}
                   >
-                    <div className="option-letter">{String.fromCharCode(65 + index)}</div>
+                    <div className="option-letter">
+                      {String.fromCharCode(65 + index)}
+                    </div>
                     <input
                       type="text"
                       className="question-input"
                       placeholder={`Option ${index + 1}`}
                       value={option}
-                      onChange={(e) => handleOptionChange(index, e.target.value)}
+                      onChange={(e) =>
+                        handleOptionChange(index, e.target.value)
+                      }
                       required
                     />
                     <input
@@ -108,7 +114,7 @@ const Question = () => {
                       name="correct-answer"
                       checked={newQuestion.answer === option}
                       onChange={() => handleAnswerSelect(option)}
-                      style={{ marginLeft: 'auto' }}
+                      style={{ marginLeft: "auto" }}
                     />
                   </div>
                 ))}
@@ -120,10 +126,12 @@ const Question = () => {
                   type="number"
                   min="1"
                   value={newQuestion.points}
-                  onChange={(e) => setNewQuestion({
-                    ...newQuestion,
-                    points: parseInt(e.target.value)
-                  })}
+                  onChange={(e) =>
+                    setNewQuestion({
+                      ...newQuestion,
+                      points: parseInt(e.target.value),
+                    })
+                  }
                   className="points-input"
                 />
               </div>
@@ -147,12 +155,18 @@ const Question = () => {
                   {q.options.map((option, index) => (
                     <div
                       key={option}
-                      className={`option-item ${q.answer === option ? 'correct-answer' : ''}`}
+                      className={`option-item ${
+                        q.answer === option ? "correct-answer" : ""
+                      }`}
                     >
-                      <div className="option-letter">{String.fromCharCode(65 + index)}</div>
+                      <div className="option-letter">
+                        {String.fromCharCode(65 + index)}
+                      </div>
                       {option}
                       {q.answer === option && (
-                        <span style={{ marginLeft: 'auto', color: '#28a745' }}>✓ Correct</span>
+                        <span style={{ marginLeft: "auto", color: "#28a745" }}>
+                          ✓ Correct
+                        </span>
                       )}
                     </div>
                   ))}
