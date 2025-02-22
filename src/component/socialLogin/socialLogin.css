@@ -1,0 +1,73 @@
+.kep-login-facebook.metro {
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
+    border-radius: 3px;
+    width: 310px;
+    margin-left: 5px;
+}
+
+.logoutButton{
+    color: red;
+    cursor: pointer;
+}
+
+/* .socialUserInfo{
+    display: flex;
+    justify-content: space-around;
+} */
+
+
+.card {
+    display: flex;
+    /* gap: 40px; */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    margin-left: 10px;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
+

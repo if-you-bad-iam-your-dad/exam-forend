@@ -1,0 +1,93 @@
+
+
+
+  /* Dashboard */
+  .dashboard {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+  }
+
+  /* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+  
+/* Dashboard Card Layout */
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .dashboard-cards .col-md-3 {
+    flex: 1;
+    min-width: 220px; /* Ensures responsiveness */
+    max-width: 24%;
+  }
+  
+  /* Card Styles */
+  .DashboardCard {
+    border-radius: 8px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Colors */
+  .text-bg-primary {
+    background-color: #007bff;
+  }
+  
+  .text-bg-success {
+    background-color: #28a745;
+  }
+  
+  .text-bg-warning {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .text-bg-info {
+    background-color: #17a2b8;
+  }
+
+  .text-bg-users {
+    background-color: #ff0000;
+  }
+
+  .text-bg-results {
+    background-color: #000000;
+  }
+  
+  /* Typography */
+  .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .dashboard-cards .card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  .dashboard-cards .card:hover {
+    transform: scale(1.02);
+  }
+  
+  

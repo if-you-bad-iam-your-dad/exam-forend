@@ -1,0 +1,21 @@
+
+
+  /* Dashboard */
+.dashboard {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+  }
+
+  /* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+  

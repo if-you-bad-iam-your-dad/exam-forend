@@ -1,0 +1,31 @@
+
+    .exam-section {
+    flex: 1;
+    padding: 20px;
+    background: white;
+  }
+  
+  .question-card {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .option-label {
+    display: block;
+    margin: 5px 0;
+  }
+
+    /* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  flex: 1;
+}
