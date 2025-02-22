@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NavbarItem from "../../component/navbar/NavbarItem";
 import Sidebar from "../../component/sidebar/Sidebar";
-import { questionService } from "../../services/api";
+// import { questionService } from "../../services/api";
 import "./QuestionStyle.css";
 
 const Question = () => {
@@ -13,18 +13,18 @@ const Question = () => {
     points: 1,
   });
 
-  useEffect(() => {
-    loadQuestions();
-  }, []);
+  // useEffect(() => {
+  //   loadQuestions();
+  // }, []);
 
-  const loadQuestions = async () => {
-    try {
-      const data = await questionService.getQuestions();
-      setQuestions(data);
-    } catch (error) {
-      console.error("Error loading questions:", error);
-    }
-  };
+  // const loadQuestions = async () => {
+  //   try {
+  //     const data = await questionService.getQuestions();
+  //     setQuestions(data);
+  //   } catch (error) {
+  //     console.error("Error loading questions:", error);
+  //   }
+  // };
 
   const handleQuestionChange = (e) => {
     setNewQuestion({
@@ -54,18 +54,6 @@ const Question = () => {
     if (!newQuestion.answer) {
       alert("Please select a correct answer");
       return;
-    }
-    try {
-      await questionService.createQuestion(newQuestion);
-      loadQuestions();
-      setNewQuestion({
-        question: "",
-        options: ["", "", "", ""],
-        answer: "",
-        points: 1,
-      });
-    } catch (error) {
-      console.error("Error creating question:", error);
     }
   };
 
