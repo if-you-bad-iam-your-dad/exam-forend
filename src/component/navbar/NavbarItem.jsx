@@ -15,7 +15,7 @@ const NavbarItem = () => {
 
   useEffect(() => {
     if (!GetUserData().access_token) {
-      navigate("/login");
+      navigate("/");
     } else {
     }
   });
